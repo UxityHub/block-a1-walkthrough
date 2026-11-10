@@ -43,8 +43,10 @@
     <div class="modal-card">
       <p class="eyebrow">INTERACTIVE PREVIEW</p>
       <h2>Walk through Block A1</h2>
-      <p>This first architectural-shell preview uses the approved plan and an 11 ft ceiling. Detailed 3D furniture and finishes are the next production stage.</p>
-      <button id="startButton" class="primary" type="button">Enter apartment</button>
+      <p>Explore the furnished apartment in full 3D, rebuilt from the architectural plan with an 11 ft ceiling, luxury finishes, furniture, bathrooms, kitchen and balconies.</p>
+      <div class="load-track" aria-hidden="true"><span id="loadProgress"></span></div>
+      <p id="loadStatus" class="load-status">Loading furnished apartment…</p>
+      <button id="startButton" class="primary" type="button" disabled>Enter apartment</button>
       <small>Desktop: WASD + mouse &nbsp;•&nbsp; Mobile: arrows + drag to look</small>
     </div>
   </section>
@@ -70,7 +72,15 @@
     <button data-move="right" aria-label="Move right">▶</button>
   </div>
 
-  <div class="status"><span></span> 11 ft ceiling · Web preview</div>
-  <script src="app.js"></script>
+  <div class="status"><span></span> Furnished 3D · 11 ft ceiling</div>
+  <script type="importmap">
+    {
+      "imports": {
+        "three": "https://cdn.jsdelivr.net/npm/three@0.180.0/build/three.module.js",
+        "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.180.0/examples/jsm/"
+      }
+    }
+  </script>
+  <script type="module" src="app.js"></script>
 </body>
 </html>

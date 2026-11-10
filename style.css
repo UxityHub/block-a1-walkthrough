@@ -143,6 +143,10 @@ button { font: inherit; }
   font-weight: 750;
   cursor: pointer;
 }
+.primary:disabled { cursor: wait; filter: grayscale(.65); opacity: .55; }
+.load-track { height: 4px; margin-top: 22px; overflow: hidden; border-radius: 99px; background: rgba(255,255,255,.11); }
+.load-track span { display: block; width: 4%; height: 100%; border-radius: inherit; background: linear-gradient(90deg, #b88a45, #ead4a5); transition: width .2s ease; }
+.load-status { margin: 9px 0 0 !important; color: #aaa59c !important; font-size: 12px; }
 .close { position: absolute; top: 14px; right: 16px; border: 0; color: #ddd; background: none; font-size: 28px; cursor: pointer; }
 
 .mobile-pad { display: none; }
