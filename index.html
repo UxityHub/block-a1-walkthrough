@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#0d0d0d">
+  <title>Block A1 | Virtual Apartment Walkthrough</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <canvas id="scene" aria-label="Interactive 3D apartment walkthrough"></canvas>
+
+  <header class="topbar">
+    <div>
+      <p class="eyebrow">PRIVATE RESIDENCE</p>
+      <h1>BLOCK A1</h1>
+    </div>
+    <div class="actions">
+      <button id="helpButton" type="button">Controls</button>
+      <button id="fullscreenButton" type="button">Fullscreen</button>
+    </div>
+  </header>
+
+  <nav class="room-nav" aria-label="Jump to a room">
+    <button data-room="entry">Entry</button>
+    <button data-room="living">Living</button>
+    <button data-room="family">Family lounge</button>
+    <button data-room="kitchen">Kitchen</button>
+    <button data-room="bed1">Bedroom 1</button>
+    <button data-room="bed2">Bedroom 2</button>
+    <button data-room="bed3">Bedroom 3</button>
+    <button data-room="bed4">Bedroom 4</button>
+    <button data-room="balcony">Balcony</button>
+  </nav>
+
+  <aside class="minimap" aria-label="Apartment map">
+    <img src="floorplan.jpg" alt="Block A1 floor plan">
+    <span id="mapMarker" aria-hidden="true"></span>
+    <span id="mapDirection" aria-hidden="true"></span>
+  </aside>
+
+  <section id="intro" class="modal intro">
+    <div class="modal-card">
+      <p class="eyebrow">INTERACTIVE PREVIEW</p>
+      <h2>Walk through Block A1</h2>
+      <p>This first architectural-shell preview uses the approved plan and an 11 ft ceiling. Detailed 3D furniture and finishes are the next production stage.</p>
+      <button id="startButton" class="primary" type="button">Enter apartment</button>
+      <small>Desktop: WASD + mouse &nbsp;•&nbsp; Mobile: arrows + drag to look</small>
+    </div>
+  </section>
+
+  <section id="help" class="modal hidden" aria-hidden="true">
+    <div class="modal-card compact">
+      <button id="closeHelp" class="close" type="button" aria-label="Close">×</button>
+      <p class="eyebrow">NAVIGATION</p>
+      <h2>Walkthrough controls</h2>
+      <ul>
+        <li><strong>W A S D</strong> — walk</li>
+        <li><strong>Mouse</strong> — look around</li>
+        <li><strong>Room bar</strong> — jump to a room</li>
+        <li><strong>Esc</strong> — release the mouse</li>
+      </ul>
+    </div>
+  </section>
+
+  <div class="mobile-pad" aria-label="Mobile movement controls">
+    <button data-move="forward" aria-label="Move forward">▲</button>
+    <button data-move="left" aria-label="Move left">◀</button>
+    <button data-move="back" aria-label="Move backward">▼</button>
+    <button data-move="right" aria-label="Move right">▶</button>
+  </div>
+
+  <div class="status"><span></span> 11 ft ceiling · Web preview</div>
+  <script src="app.js"></script>
+</body>
+</html>
